@@ -6,13 +6,14 @@ move_config() {
 	. /lib/upgrade/common.sh
 
 	if export_bootdevice && export_partdevice partdev 1; then
-		mkdir -p /boot
+		mkdir -p /home/boot
 		part_magic_fat "/dev/$partdev" && parttype=vfat
-		mount -t $parttype -o rw,noatime "/dev/$partdev" /boot
-		if [ -f "/boot/$BACKUP_FILE" ]; then
-			mv -f "/boot/$BACKUP_FILE" /
+		mount -t $parttype -o rw,noatime "/dev/$partdev" /home/boot
+		if [ -f "/home/boot/$BACKUP_FILE" ]; then
+			mv -f "/home/boot/$BACKUP_FILE" /
 		fi
-		mount --bind /boot/boot /boot
+		#mount --bind /boot/boot /boot
+		ln -s /home/boot/boot /boot
 	fi
 }
 

@@ -2,3 +2,8 @@ src-git-full packages https://git.openwrt.org/feed/packages.git^d057936acbefd76b
 src-git-full luci https://git.openwrt.org/project/luci.git^0b38d70fbd47b0c702d5001de623213eb301a6fe
 src-git-full routing https://git.openwrt.org/feed/routing.git^1cc7676b9f32acc30ec47f15fcb70380d5d6ef01
 src-git-full telephony https://git.openwrt.org/feed/telephony.git^36d9f2f962bd0aba2eef674eb265819609ea99ed
+src-git passwall https://github.com/xiaorouji/openwrt-passwall.git
+src-git imkenf https://github.com/imkenf/op-package.git;22.03
+src-git istore https://github.com/linkease/istore;main
+src-git nas https://github.com/linkease/nas-packages.git;master
+src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main
